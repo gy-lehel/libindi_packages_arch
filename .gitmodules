@@ -1,0 +1,228 @@
+[submodule "firmware/libahp-gt"]
+	path = firmware/libahp-gt
+	url = ssh://aur.archlinux.org/libahp-gt.git
+[submodule "firmware/libahp-xc"]
+	path = firmware/libahp-xc
+	url = ssh://aur.archlinux.org/libahp-xc.git
+[submodule "firmware/libaltaircam"]
+	path = firmware/libaltaircam
+	url = ssh://aur.archlinux.org/libaltaircam.git
+[submodule "firmware/libapogee"]
+	path = firmware/libapogee
+	url = ssh://aur.archlinux.org/libapogee.git
+[submodule "firmware/libasi"]
+	path = firmware/libasi
+	url = ssh://aur.archlinux.org/libasi.git
+[submodule "firmware/libastroasis"]
+	path = firmware/libastroasis
+	url = ssh://aur.archlinux.org/libastroasis.git
+[submodule "firmware/libatik"]
+	path = firmware/libatik
+	url = ssh://aur.archlinux.org/libatik.git
+[submodule "firmware/libbressercam"]
+	path = firmware/libbressercam
+	url = ssh://aur.archlinux.org/libbressercam.git
+[submodule "firmware/libfishcamp"]
+	path = firmware/libfishcamp
+	url = ssh://aur.archlinux.org/libfishcamp.git
+[submodule "firmware/libfli"]
+	path = firmware/libfli
+	url = ssh://aur.archlinux.org/libfli.git
+[submodule "firmware/libinovasdk"]
+	path = firmware/libinovasdk
+	url = ssh://aur.archlinux.org/libinovasdk.git
+[submodule "firmware/libmallincam"]
+	path = firmware/libmallincam
+	url = ssh://aur.archlinux.org/libmallincam.git
+[submodule "firmware/libmeadecam"]
+	path = firmware/libmeadecam
+	url = ssh://aur.archlinux.org/libmeadecam.git
+[submodule "firmware/libmicam"]
+	path = firmware/libmicam
+	url = ssh://aur.archlinux.org/libmicam.git
+[submodule "firmware/libnncam"]
+	path = firmware/libnncam
+	url = ssh://aur.archlinux.org/libnncam.git
+[submodule "firmware/libogmacam"]
+	path = firmware/libogmacam
+	url = ssh://aur.archlinux.org/libogmacam.git
+[submodule "firmware/libomegonprocam"]
+	path = firmware/libomegonprocam
+	url = ssh://aur.archlinux.org/libomegonprocam.git
+[submodule "firmware/libpigpiod"]
+	path = firmware/libpigpiod
+	url = ssh://aur.archlinux.org/libpigpiod.git
+[submodule "firmware/libpktriggercord"]
+	path = firmware/libpktriggercord
+	url = ssh://aur.archlinux.org/libpktriggercord.git
+[submodule "firmware/libplayerone"]
+	path = firmware/libplayerone
+	url = ssh://aur.archlinux.org/libplayerone.git
+[submodule "firmware/libqhy"]
+	path = firmware/libqhy
+	url = ssh://aur.archlinux.org/libqhy.git
+[submodule "firmware/libqsi"]
+	path = firmware/libqsi
+	url = ssh://aur.archlinux.org/libqsi.git
+[submodule "firmware/libricohcamerasdk"]
+	path = firmware/libricohcamerasdk
+	url = ssh://aur.archlinux.org/libricohcamerasdk.git
+[submodule "firmware/libsbig"]
+	path = firmware/libsbig
+	url = ssh://aur.archlinux.org/libsbig.git
+[submodule "firmware/libstarshootg"]
+	path = firmware/libstarshootg
+	url = ssh://aur.archlinux.org/libstarshootg.git
+[submodule "firmware/libsvbony"]
+	path = firmware/libsvbony
+	url = ssh://aur.archlinux.org/libsvbony.git
+[submodule "firmware/libsvbonycam"]
+	path = firmware/libsvbonycam
+	url = ssh://aur.archlinux.org/libsvbonycam.git
+[submodule "firmware/libtoupcam"]
+	path = firmware/libtoupcam
+	url = ssh://aur.archlinux.org/libtoupcam.git
+[submodule "firmware/libtscam"]
+	path = firmware/libtscam
+	url = ssh://aur.archlinux.org/libtscam.git
+[submodule "drivers/libindi-aagcloudwatcher-ng"]
+	path = drivers/libindi-aagcloudwatcher-ng
+	url = ssh://aur.archlinux.org/libindi-aagcloudwatcher-ng.git
+[submodule "drivers/libindi-ahp-xc"]
+	path = drivers/libindi-ahp-xc
+	url = ssh://aur.archlinux.org/libindi-ahp-xc.git
+[submodule "drivers/libindi-aok"]
+	path = drivers/libindi-aok
+	url = ssh://aur.archlinux.org/libindi-aok.git
+[submodule "drivers/libindi-apogee"]
+	path = drivers/libindi-apogee
+	url = ssh://aur.archlinux.org/libindi-apogee.git
+[submodule "drivers/libindi-armadillo-platypus"]
+	path = drivers/libindi-armadillo-platypus
+	url = ssh://aur.archlinux.org/libindi-armadillo-platypus.git
+[submodule "drivers/libindi-asi"]
+	path = drivers/libindi-asi
+	url = ssh://aur.archlinux.org/libindi-asi.git
+[submodule "drivers/libindi-astarbox"]
+	path = drivers/libindi-astarbox
+	url = ssh://aur.archlinux.org/libindi-astarbox.git
+[submodule "drivers/libindi-astroasis"]
+	path = drivers/libindi-astroasis
+	url = ssh://aur.archlinux.org/libindi-astroasis.git
+[submodule "drivers/libindi-atik"]
+	path = drivers/libindi-atik
+	url = ssh://aur.archlinux.org/libindi-atik.git
+[submodule "drivers/libindi-avalon"]
+	path = drivers/libindi-avalon
+	url = ssh://aur.archlinux.org/libindi-avalon.git
+[submodule "drivers/libindi-avalonud"]
+	path = drivers/libindi-avalonud
+	url = ssh://aur.archlinux.org/libindi-avalonud.git
+[submodule "drivers/libindi-beefocus"]
+	path = drivers/libindi-beefocus
+	url = ssh://aur.archlinux.org/libindi-beefocus.git
+[submodule "drivers/libindi-bresserexos2"]
+	path = drivers/libindi-bresserexos2
+	url = ssh://aur.archlinux.org/libindi-bresserexos2.git
+[submodule "drivers/libindi-celestronaux"]
+	path = drivers/libindi-celestronaux
+	url = ssh://aur.archlinux.org/libindi-celestronaux.git
+[submodule "drivers/libindi-dsi"]
+	path = drivers/libindi-dsi
+	url = ssh://aur.archlinux.org/libindi-dsi.git
+[submodule "drivers/libindi-duino"]
+	path = drivers/libindi-duino
+	url = ssh://aur.archlinux.org/libindi-duino.git
+[submodule "drivers/libindi-eqmod"]
+	path = drivers/libindi-eqmod
+	url = ssh://aur.archlinux.org/libindi-eqmod.git
+[submodule "drivers/libindi-ffmv"]
+	path = drivers/libindi-ffmv
+	url = ssh://aur.archlinux.org/libindi-ffmv.git
+[submodule "drivers/libindi-fishcamp"]
+	path = drivers/libindi-fishcamp
+	url = ssh://aur.archlinux.org/libindi-fishcamp.git
+[submodule "drivers/libindi-fli"]
+	path = drivers/libindi-fli
+	url = ssh://aur.archlinux.org/libindi-fli.git
+[submodule "drivers/libindi-gphoto"]
+	path = drivers/libindi-gphoto
+	url = ssh://aur.archlinux.org/libindi-gphoto.git
+[submodule "drivers/libindi-gpsd"]
+	path = drivers/libindi-gpsd
+	url = ssh://aur.archlinux.org/libindi-gpsd.git
+[submodule "drivers/libindi-gpsnmea"]
+	path = drivers/libindi-gpsnmea
+	url = ssh://aur.archlinux.org/libindi-gpsnmea.git
+[submodule "drivers/libindi-inovaplx"]
+	path = drivers/libindi-inovaplx
+	url = ssh://aur.archlinux.org/libindi-inovaplx.git
+[submodule "drivers/libindi-maxdomeii"]
+	path = drivers/libindi-maxdomeii
+	url = ssh://aur.archlinux.org/libindi-maxdomeii.git
+[submodule "drivers/libindi-mgen"]
+	path = drivers/libindi-mgen
+	url = ssh://aur.archlinux.org/libindi-mgen.git
+[submodule "drivers/libindi-mi"]
+	path = drivers/libindi-mi
+	url = ssh://aur.archlinux.org/libindi-mi.git
+[submodule "drivers/libindi-nexdome"]
+	path = drivers/libindi-nexdome
+	url = ssh://aur.archlinux.org/libindi-nexdome.git
+[submodule "drivers/libindi-nightscape"]
+	path = drivers/libindi-nightscape
+	url = ssh://aur.archlinux.org/libindi-nightscape.git
+[submodule "drivers/libindi-ocs"]
+	path = drivers/libindi-ocs
+	url = ssh://aur.archlinux.org/libindi-ocs.git
+[submodule "drivers/libindi-orion-ssg3"]
+	path = drivers/libindi-orion-ssg3
+	url = ssh://aur.archlinux.org/libindi-orion-ssg3.git
+[submodule "drivers/libindi-pentax"]
+	path = drivers/libindi-pentax
+	url = ssh://aur.archlinux.org/libindi-pentax.git
+[submodule "drivers/libindi-playerone"]
+	path = drivers/libindi-playerone
+	url = ssh://aur.archlinux.org/libindi-playerone.git
+[submodule "drivers/libindi-qhy"]
+	path = drivers/libindi-qhy
+	url = ssh://aur.archlinux.org/libindi-qhy.git
+[submodule "drivers/libindi-qsi"]
+	path = drivers/libindi-qsi
+	url = ssh://aur.archlinux.org/libindi-qsi.git
+[submodule "drivers/libindi-rolloffino"]
+	path = drivers/libindi-rolloffino
+	url = ssh://aur.archlinux.org/libindi-rolloffino.git
+[submodule "drivers/libindi-rtklib"]
+	path = drivers/libindi-rtklib
+	url = ssh://aur.archlinux.org/libindi-rtklib.git
+[submodule "drivers/libindi-sbig"]
+	path = drivers/libindi-sbig
+	url = ssh://aur.archlinux.org/libindi-sbig.git
+[submodule "drivers/libindi-shelyak"]
+	path = drivers/libindi-shelyak
+	url = ssh://aur.archlinux.org/libindi-shelyak.git
+[submodule "drivers/libindi-starbook"]
+	path = drivers/libindi-starbook
+	url = ssh://aur.archlinux.org/libindi-starbook.git
+[submodule "drivers/libindi-starbook-ten"]
+	path = drivers/libindi-starbook-ten
+	url = ssh://aur.archlinux.org/libindi-starbook-ten.git
+[submodule "drivers/libindi-svbony"]
+	path = drivers/libindi-svbony
+	url = ssh://aur.archlinux.org/libindi-svbony.git
+[submodule "drivers/libindi-sx"]
+	path = drivers/libindi-sx
+	url = ssh://aur.archlinux.org/libindi-sx.git
+[submodule "drivers/libindi-talon6"]
+	path = drivers/libindi-talon6
+	url = ssh://aur.archlinux.org/libindi-talon6.git
+[submodule "drivers/libindi-toupbase"]
+	path = drivers/libindi-toupbase
+	url = ssh://aur.archlinux.org/libindi-toupbase.git
+[submodule "drivers/libindi-webcam"]
+	path = drivers/libindi-webcam
+	url = ssh://aur.archlinux.org/libindi-webcam.git
+[submodule "drivers/libindi-weewx-json"]
+	path = drivers/libindi-weewx-json
+	url = ssh://aur.archlinux.org/libindi-weewx-json.git

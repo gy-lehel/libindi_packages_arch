@@ -16,9 +16,9 @@ function test_build() {
 }
 
 ################################################################################
-#for firmware in $(ls firmware | grep -v -f firmware/ignore); do
-#  test_build "${git_root}/firmware/${firmware}"
-#done
+for firmware in $(ls firmware | grep -v -f firmware/ignore); do
+  test_build "${git_root}/firmware/${firmware}"
+done
 
 echo "################################################################################"
 echo "# Installing Firmware packages"
