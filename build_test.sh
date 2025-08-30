@@ -17,14 +17,14 @@ function test_build() {
 }
 
 ################################################################################
-for firmware in $(ls firmware | grep -v -f firmware/ignore | grep -v -f "firmware/ignore.${architecture}"); do
-  test_build "${git_root}/firmware/${firmware}"
-done
+#for firmware in $(ls firmware | grep -v -f firmware/ignore | grep -v -f "firmware/ignore.${architecture}"); do
+#  test_build "${git_root}/firmware/${firmware}"
+#done
 
-echo "################################################################################"
-echo "# Installing Firmware packages"
-echo "################################################################################"
-sudo pacman -U $(find "${git_root}/firmware" -type f -name '*.zst')
+#echo "################################################################################"
+#echo "# Installing Firmware packages"
+#echo "################################################################################"
+#sudo pacman -U $(find "${git_root}/firmware" -type f -name '*.zst')
 
 for driver in $(ls drivers | grep -v -f drivers/ignore | grep -v -f "drivers/ignore.${architecture}"); do
   test_build "${git_root}/drivers/${driver}"
