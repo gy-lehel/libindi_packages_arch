@@ -1,3 +1,6 @@
 ignore
+ignore.x86_64
+ignore.i686
+ignore.aarch64
 libindi-ahp-xc
 indi-astarbox
