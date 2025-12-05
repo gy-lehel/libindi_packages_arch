@@ -6,6 +6,7 @@ set -x
 
 NEWVERSION=$1
 readonly git_root="$(git rev-parse --show-toplevel)"
+readonly architecture="$(uname -m)"
 
 ################################################################################
 function update_version() {
@@ -38,12 +39,12 @@ if [ ! -f "v${NEWVERSION}.tar.gz" ]; then
 fi
 NEWHASH="$(sha256sum "v${NEWVERSION}.tar.gz" | cut -f1 -d' ')"
 
-for firmware in $(ls firmware | grep -v -f firmware/ignore); do
+for firmware in $(ls firmware | grep -v -f firmware/ignore | grep -v -f "firmware/ignore.${architecture}"); do
   echo "Updating [${firmware}] to [${NEWVERSION}]"
   update_version "firmware/${firmware}/PKGBUILD" "${NEWVERSION}" "${OLD_HASH}" "${NEWHASH}"
 done
 
-for driver in $(ls drivers | grep -v -f drivers/ignore); do
+for driver in $(ls drivers | grep -v -f drivers/ignore | grep -v -f "drivers/ignore.${architecture}"); do
   echo "Updating [${driver}] to [${NEWVERSION}]"
   update_version "drivers/${driver}/PKGBUILD" "${NEWVERSION}" "${OLD_HASH}" "${NEWHASH}"
 done
