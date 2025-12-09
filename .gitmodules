@@ -88,9 +88,6 @@
 [submodule "drivers/libindi-aagcloudwatcher-ng"]
 	path = drivers/libindi-aagcloudwatcher-ng
 	url = ssh://aur.archlinux.org/libindi-aagcloudwatcher-ng.git
-[submodule "drivers/libindi-ahp-xc"]
-	path = drivers/libindi-ahp-xc
-	url = ssh://aur.archlinux.org/libindi-ahp-xc.git
 [submodule "drivers/libindi-aok"]
 	path = drivers/libindi-aok
 	url = ssh://aur.archlinux.org/libindi-aok.git
