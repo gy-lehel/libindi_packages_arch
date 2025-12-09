@@ -7,12 +7,22 @@ readonly architecture="$(uname -m)"
 
 ################################################################################
 function test_build() {
-  pushd $1
-  echo "################################################################################"
-  echo "# Building ${1}"
-  echo "################################################################################"
-  makepkg -srcf
-  makepkg --printsrcinfo >.SRCINFO
+  local pkgname="${1}"
+  pushd "${pkgname}"
+  local version="$(grep "pkgver=" PKGBUILD | cut -f2 -d'=')"
+
+  if ! ls | grep -q "${version}"
+  then
+    echo "################################################################################"
+    echo "# Building ${pkgname}"
+    echo "################################################################################"
+    makepkg -srcf
+    makepkg --printsrcinfo >.SRCINFO
+  else
+    echo "################################################################################"
+    echo "# ${pkgname} is already built, skipping"
+    echo "################################################################################"
+  fi
   popd
 }
 

@@ -2,5 +2,4 @@ ignore
 ignore.x86_64
 ignore.i686
 ignore.aarch64
-libahp-gt
-libahp-xc
+libpigpiod
