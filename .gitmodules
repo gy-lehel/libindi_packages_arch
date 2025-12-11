@@ -214,12 +214,42 @@
 [submodule "drivers/libindi-talon6"]
 	path = drivers/libindi-talon6
 	url = ssh://aur.archlinux.org/libindi-talon6.git
-[submodule "drivers/libindi-toupbase"]
-	path = drivers/libindi-toupbase
-	url = ssh://aur.archlinux.org/libindi-toupbase.git
 [submodule "drivers/libindi-webcam"]
 	path = drivers/libindi-webcam
 	url = ssh://aur.archlinux.org/libindi-webcam.git
 [submodule "drivers/libindi-weewx-json"]
 	path = drivers/libindi-weewx-json
 	url = ssh://aur.archlinux.org/libindi-weewx-json.git
+[submodule "drivers/libindi-altaircam"]
+	path = drivers/libindi-altaircam
+	url = ssh://aur@aur.archlinux.org/libindi-altaircam.git
+[submodule "drivers/libindi-bressercam"]
+	path = drivers/libindi-bressercam
+	url = ssh://aur@aur.archlinux.org/libindi-bressercam.git
+[submodule "drivers/libindi-mallincam"]
+	path = drivers/libindi-mallincam
+	url = ssh://aur@aur.archlinux.org/libindi-mallincam.git
+[submodule "drivers/libindi-meadecam"]
+	path = drivers/libindi-meadecam
+	url = ssh://aur@aur.archlinux.org/libindi-meadecam.git
+[submodule "drivers/libindi-nncam"]
+	path = drivers/libindi-nncam
+	url = ssh://aur@aur.archlinux.org/libindi-nncam.git
+[submodule "drivers/libindi-ogmacam"]
+	path = drivers/libindi-ogmacam
+	url = ssh://aur@aur.archlinux.org/libindi-ogmacam.git
+[submodule "drivers/libindi-omegonprocam"]
+	path = drivers/libindi-omegonprocam
+	url = ssh://aur@aur.archlinux.org/libindi-omegonprocam.git
+[submodule "drivers/libindi-starshootg"]
+	path = drivers/libindi-starshootg
+	url = ssh://aur@aur.archlinux.org/libindi-starshootg.git
+[submodule "drivers/libindi-svbonycam"]
+	path = drivers/libindi-svbonycam
+	url = ssh://aur@aur.archlinux.org/libindi-svbonycam.git
+[submodule "drivers/libindi-toupcam"]
+	path = drivers/libindi-toupcam
+	url = ssh://aur@aur.archlinux.org/libindi-toupcam.git
+[submodule "drivers/libindi-tscam"]
+	path = drivers/libindi-tscam
+	url = ssh://aur@aur.archlinux.org/libindi-tscam.git

@@ -19,7 +19,7 @@ function test_build() {
     return 0
   fi
 
-  if ! ls | grep -q "${version}" | grep -q "${PKGFORMAT}"; then
+  if ! ls | grep -q "${version}"; then
     echo "################################################################################"
     echo "# Building ${pkgname}"
     echo "################################################################################"
