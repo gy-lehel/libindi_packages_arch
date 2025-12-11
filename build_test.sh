@@ -5,22 +5,21 @@ set -x
 
 readonly git_root="$(git rev-parse --show-toplevel)"
 readonly architecture="$(uname -m)"
+readonly PKGFORMAT=$(grep PKGEXT /etc/makepkg.conf | cut -f2 -d"'")
 
 ################################################################################
 function test_build() {
   local pkgname="${1}"
   pushd "${pkgname}"
   local version="$(grep "pkgver=" PKGBUILD | cut -f2 -d'=')"
-  if ! grep -q "${architecture}" PKGBUILD
-  then
+  if ! grep -q "${architecture}" PKGBUILD; then
     echo "################################################################################"
     echo "# Building ${pkgname} skipped for ${architecture}"
     echo "################################################################################"
     return 0
   fi
 
-  if ! ls | grep -q "${version}"
-  then
+  if ! ls | grep -q "${version}" | grep -q "${PKGFORMAT}"; then
     echo "################################################################################"
     echo "# Building ${pkgname}"
     echo "################################################################################"
@@ -42,7 +41,6 @@ done
 echo "################################################################################"
 echo "# Installing Firmware packages"
 echo "################################################################################"
-PKGFORMAT=$(grep PKGEXT /etc/makepkg.conf | cut -f2 -d"'")
 sudo pacman -U $(find "${git_root}/firmware" -type f -name "*${PKGFORMAT}")
 
 for driver in $(ls drivers | grep -v -f drivers/ignore); do
