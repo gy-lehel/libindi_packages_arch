@@ -1,2 +1,4 @@
 ignore
+ignore.x86_64
+ignore.aarch64
 libpigpiod

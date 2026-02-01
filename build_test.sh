@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 
+set -o pipefail
 set -e
 set -x
 
-readonly git_root="$(git rev-parse --show-toplevel)"
-readonly architecture="$(uname -m)"
+source ./common.sh
+
 readonly PKGFORMAT=$(grep PKGEXT /etc/makepkg.conf | cut -f2 -d"'")
 
 ################################################################################
 function test_build() {
-  local pkgname="${1}"
-  pushd "${pkgname}"
+  local pkgbuild="${1}/PKGBUILD"
+  local package_root="$(dirname "${pkgbuild}")"
+
+  pushd "${package_root}"
   local version="$(grep "pkgver=" PKGBUILD | cut -f2 -d'=')"
   if ! grep -q "${architecture}" PKGBUILD; then
     echo "################################################################################"
@@ -34,18 +37,14 @@ function test_build() {
 }
 
 ################################################################################
-for firmware in $(ls firmware | grep -v -f firmware/ignore); do
-  test_build "${git_root}/firmware/${firmware}"
-done
+foreach_dir test_build firmware
 
 echo "################################################################################"
 echo "# Installing Firmware packages"
 echo "################################################################################"
 sudo pacman -U $(find "${git_root}/firmware" -type f -name "*${PKGFORMAT}")
 
-for driver in $(ls drivers | grep -v -f drivers/ignore); do
-  test_build "${git_root}/drivers/${driver}"
-done
+foreach_dir test_build drivers
 
 echo "################################################################################"
 echo "# Installing Driver packages"

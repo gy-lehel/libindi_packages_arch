@@ -4,27 +4,30 @@ set -o pipefail
 set -e
 set -x
 
-NEWVERSION=$1
-readonly git_root="$(git rev-parse --show-toplevel)"
-readonly architecture="$(uname -m)"
+source ./common.sh
+
+NEW_VERSION=$1
+REFERENCE_PKGBUILD="${git_root}/firmware/libasi/PKGBUILD"
 
 ################################################################################
 function update_version() {
-  local pkgbuild="${1}"
+  local pkgbuild="${1}/PKGBUILD"
+  local old_version="${2}"
+  local new_version="${3}"
+  local old_hash="${4}"
+  local new_hash="${5}"
   local package_root="$(dirname "${pkgbuild}")"
-  local old_version="$(grep "pkgver=" "${pkgbuild}" | cut -f2 -d'=')"
-  local new_version="${2}"
-  local old_hash="$(grep "sha256sums=" "${git_root}/firmware/libasi/PKGBUILD" | cut -f2 -d'=' | tr -d '()"')"
-  local new_hash="${3}"
 
-  if [ "${old_version}" == "${new_version}"]
+  echo "Updating [${package_root}] to [${new_version}]"
+
+  if [ "${old_version}" == "${new_version}" ]
   then
     return 0
   fi
 
   pushd "${package_root}"
-  git checkout master
-  git pull --rebase origin master
+    git checkout master
+    git pull --rebase origin master
   popd
 
   sed -e "s@${old_version}@${new_version}@g" -i "${pkgbuild}"
@@ -37,17 +40,13 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-if [ ! -f "v${NEWVERSION}.tar.gz" ]; then
-  wget "https://github.com/indilib/indi-3rdparty/archive/v${NEWVERSION}.tar.gz"
+if [ ! -f "v${NEW_VERSION}.tar.gz" ]; then
+  wget "https://github.com/indilib/indi-3rdparty/archive/v${NEW_VERSION}.tar.gz"
 fi
-NEWHASH="$(sha256sum "v${NEWVERSION}.tar.gz" | cut -f1 -d' ')"
 
-for firmware in $(ls firmware | grep -v -f firmware/ignore | grep -v -f "firmware/ignore.${architecture}"); do
-  echo "Updating [${firmware}] to [${NEWVERSION}]"
-  update_version "firmware/${firmware}/PKGBUILD" "${NEWVERSION}" "${NEWHASH}"
-done
+OLD_VERSION="$(grep "pkgver=" "${REFERENCE_PKGBUILD}" | cut -f2 -d'=')"
+OLD_HASH="$(grep "sha256sums=" "${REFERENCE_PKGBUILD}" | cut -f2 -d'=' | tr -d '()"')"
+NEW_HASH="$(sha256sum "v${NEW_VERSION}.tar.gz" | cut -f1 -d' ')"
 
-for driver in $(ls drivers | grep -v -f drivers/ignore | grep -v -f "drivers/ignore.${architecture}"); do
-  echo "Updating [${driver}] to [${NEWVERSION}]"
-  update_version "drivers/${driver}/PKGBUILD" "${NEWVERSION}" "${NEWHASH}"
-done
+foreach_dir update_version firmware "${OLD_VERSION}" "${NEW_VERSION}" "${OLD_HASH}" "${NEW_HASH}"
+foreach_dir update_version drivers "${OLD_VERSION}" "${NEW_VERSION}" "${OLD_HASH}" "${NEW_HASH}"

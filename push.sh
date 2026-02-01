@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 set -o pipefail
+set -e
 set -x
 
-readonly git_root="$(git rev-parse --show-toplevel)"
-readonly architecture="$(uname -m)"
+source ./common.sh
 
 ################################################################################
 function push() {
@@ -18,10 +18,5 @@ function push() {
 }
 
 ################################################################################
-for firmware in $(ls firmware | grep -v -f firmware/ignore | grep -v -f "firmware/ignore.${architecture}"); do
-  push "firmware/${firmware}"
-done
-
-for driver in $(ls drivers | grep -v -f drivers/ignore | grep -v -f "drivers/ignore.${architecture}"); do
-  push "drivers/${driver}"
-done
+foreach_dir push firmware
+foreach_dir push drivers 
