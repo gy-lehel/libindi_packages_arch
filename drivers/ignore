@@ -4,3 +4,4 @@ ignore.i686
 ignore.aarch64
 indi-astarbox
 libindi-dsi
+indi-toupbase
